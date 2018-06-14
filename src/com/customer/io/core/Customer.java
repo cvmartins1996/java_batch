@@ -17,8 +17,8 @@ public class Customer{
 		List<CustomerDto> customersFinal = new ArrayList<>();
 		
 		for (CustomerDto customerDto : customers) {
-			if (customerDto.getValorTotal() > 5) {
-				if (customerDto.getId() >= 1 && customerDto.getId() <= 20) {
+			if (customerDto.getValorTotal() > 560) {
+				if (customerDto.getId() >= 1500 && customerDto.getId() <= 2700) {
 					customersFinal.add(customerDto);
 				}
 			}
