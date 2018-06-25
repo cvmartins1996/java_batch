@@ -1,6 +1,5 @@
 package com.customer.io.core;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +19,7 @@ public class CustomerFactoryDao{
 		return new CustomerAbstractDao();
 	}
 	
-	public List<CustomerDto> getAllCustomers() throws SQLException{
+	public List<CustomerDto> getAllCustomers() {
 		CustomerDao customerDao = getCustomer();
 		
 		List<CustomerDto> findAllCustomers = customerDao.findAllCustomers(customers);

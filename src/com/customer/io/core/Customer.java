@@ -1,18 +1,17 @@
 package com.customer.io.core;
 
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Customer{
 	private List<CustomerDto> customers = new ArrayList<>();
 	
-	public List<CustomerDto> getAllCustomers() throws SQLException{
+	public List<CustomerDto> getAllCustomers() {
 		customers = new CustomerFactoryDao(new CustomerDto()).getAllCustomers();
 		return customers;
 	}
 	
-	public List<CustomerDto> verificaSeEstaAptoParacalcularMedia() throws SQLException {
+	public List<CustomerDto> verificaSeEstaAptoParacalcularMedia() {
 		List<CustomerDto> customers = getAllCustomers();
 		List<CustomerDto> customersFinal = new ArrayList<>();
 		
@@ -26,11 +25,11 @@ public class Customer{
 		return customersFinal;
 	}
 
-	public float getMedia() throws SQLException {
+	public float getMedia() {
 		return somatoria(); 
 	}
 
-	private float somatoria() throws SQLException {
+	private float somatoria() {
 		float somatoria = 0;
 		
 		List<CustomerDto> customers = verificaSeEstaAptoParacalcularMedia();
@@ -43,7 +42,7 @@ public class Customer{
 	}
 	
 	
-	public List<CustomerDto> ordenarCLientes() throws SQLException {
+	public List<CustomerDto> ordenarCLientes() {
 		List<CustomerDto> verificaSeEstaAptoParacalcularMedia = verificaSeEstaAptoParacalcularMedia();
 		
 		List<CustomerDto> customersByValue = new CustomerFactoryDao(new CustomerDto()).getCustomersByValue(verificaSeEstaAptoParacalcularMedia);

@@ -1,18 +1,21 @@
 package com.customer.io.core;
 
+import com.customer.io.annotation.Id;
+
 public class CustomerDto{
-	
+	@Id
 	private long id;
+	private String cpfCnpj;
+	private String nome;
+	private boolean ativo;
+	private float valorTotal;
+
 	public String getCpfCnpj() {
 		return cpfCnpj;
 	}
 	public void setCpfCnpj(String cpfCnpj) {
 		this.cpfCnpj = cpfCnpj;
 	}
-	private String cpfCnpj;
-	private String nome;
-	private boolean ativo;
-	private float valorTotal;
 	
 	public long getId() {
 		return id;
